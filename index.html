@@ -3,106 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kids Draw Animals</title>
+<title>Kids Animal Coloring</title>
 
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
-}
-
 body{
-    background:#f5fbff;
+    margin:0;
     padding:20px;
+    background:#f5fbff;
+    font-family:Arial;
 }
 
 h1{
     text-align:center;
-    font-size:55px;
-    margin-bottom:25px;
-    font-weight:bold;
     color:#ff1493;
-}
-
-.title2{
-    color:#00aaff;
-}
-
-.container{
-    max-width:1400px;
-    margin:auto;
-}
-
-.row{
-    display:grid;
-    grid-template-columns:180px repeat(6,1fr);
-    gap:10px;
-    margin-bottom:15px;
-}
-
-.label{
-    background:#fff0c7;
-    border-radius:20px;
-    text-align:center;
-    padding:15px;
-    border:3px solid #ffcc00;
-}
-
-.label img{
-    width:100px;
-}
-
-.label h2{
-    margin-top:10px;
-    font-size:32px;
-}
-
-.step{
-    background:white;
-    border-radius:20px;
-    border:3px solid #ddd;
-    height:220px;
-    position:relative;
-    overflow:hidden;
-    cursor:pointer;
-}
-
-.step-number{
-    position:absolute;
-    top:10px;
-    left:10px;
-    background:orange;
-    color:white;
-    width:35px;
-    height:35px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:bold;
-    font-size:20px;
-}
-
-svg{
-    width:100%;
-    height:100%;
-}
-
-.draw-area{
-    fill:white;
-    stroke:black;
-    stroke-width:4;
+    font-size:50px;
+    margin-bottom:20px;
 }
 
 .palette{
     display:flex;
     justify-content:center;
-    gap:15px;
-    margin-bottom:30px;
+    gap:12px;
     flex-wrap:wrap;
+    margin-bottom:30px;
 }
 
 .color{
@@ -111,23 +35,50 @@ svg{
     border-radius:50%;
     cursor:pointer;
     border:4px solid white;
-    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+    box-shadow:0 3px 10px rgba(0,0,0,0.3);
 }
 
-.footer{
+.container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:25px;
+    padding:20px;
     text-align:center;
-    margin-top:30px;
-    font-size:22px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+svg{
+    width:220px;
+    height:220px;
+}
+
+.name{
+    font-size:28px;
     font-weight:bold;
-    color:#666;
+    margin-top:10px;
 }
 
-@media(max-width:1100px){
-
-.row{
-    grid-template-columns:1fr;
+button{
+    margin-top:15px;
+    padding:12px 25px;
+    border:none;
+    background:#ff1493;
+    color:white;
+    border-radius:30px;
+    font-size:18px;
+    cursor:pointer;
 }
 
+.shape{
+    fill:white;
+    stroke:black;
+    stroke-width:4;
+    cursor:pointer;
 }
 
 </style>
@@ -135,7 +86,7 @@ svg{
 
 <body>
 
-<h1>DRAW <span class="title2">ANIMALS</span></h1>
+<h1>🎨 Animal Coloring Book</h1>
 
 <div class="palette">
 
@@ -154,318 +105,200 @@ svg{
 
 <!-- LION -->
 
-<div class="row">
-
-<div class="label">
-
-<img src="https://cdn-icons-png.flaticon.com/512/616/616412.png">
-
-<h2>LION</h2>
-
-</div>
-
-<div class="step">
-<div class="step-number">1</div>
-
-<svg viewBox="0 0 200 200">
-
-<circle cx="100" cy="90" r="45"
-class="draw-area"
-onclick="paint(this)" />
-
-</svg>
-
-</div>
-
-<div class="step">
-<div class="step-number">2</div>
-
-<svg viewBox="0 0 200 200">
-
-<circle cx="100" cy="90" r="45"
-class="draw-area"
-onclick="paint(this)" />
-
-<circle cx="70" cy="55" r="12"
-class="draw-area"
-onclick="paint(this)" />
-
-<circle cx="130" cy="55" r="12"
-class="draw-area"
-onclick="paint(this)" />
-
-</svg>
-
-</div>
-
-<div class="step">
-<div class="step-number">3</div>
-
-<svg viewBox="0 0 200 200">
-
-<circle cx="100" cy="90" r="45"
-class="draw-area"
-onclick="paint(this)" />
-
-<circle cx="70" cy="55" r="12"
-class="draw-area"
-onclick="paint(this)" />
-
-<circle cx="130" cy="55" r="12"
-class="draw-area"
-onclick="paint(this)" />
-
-<circle cx="85" cy="90" r="5"
-fill="black"/>
-
-<circle cx="115" cy="90" r="5"
-fill="black"/>
-
-</svg>
-
-</div>
-
-<div class="step">
-<div class="step-number">4</div>
+<div class="card">
 
 <svg viewBox="0 0 200 200">
 
 <circle cx="100" cy="90" r="60"
-class="draw-area"
+class="shape"
 onclick="paint(this)" />
 
-<circle cx="100" cy="90" r="45"
-class="draw-area"
+<circle cx="100" cy="90" r="40"
+class="shape"
 onclick="paint(this)" />
 
-</svg>
-
-</div>
-
-<div class="step">
-<div class="step-number">5</div>
-
-<svg viewBox="0 0 200 200">
-
-<circle cx="100" cy="90" r="60"
-class="draw-area"
+<circle cx="70" cy="60" r="15"
+class="shape"
 onclick="paint(this)" />
 
-<circle cx="100" cy="90" r="45"
-class="draw-area"
+<circle cx="130" cy="60" r="15"
+class="shape"
 onclick="paint(this)" />
 
-<rect x="80" y="135" width="15" height="40"
-class="draw-area"
+<rect x="80" y="130" width="15" height="40"
+class="shape"
 onclick="paint(this)" />
 
-<rect x="105" y="135" width="15" height="40"
-class="draw-area"
+<rect x="105" y="130" width="15" height="40"
+class="shape"
 onclick="paint(this)" />
 
 </svg>
 
-</div>
+<div class="name">Lion</div>
 
-<div class="step">
-<div class="step-number">6</div>
-
-<svg viewBox="0 0 200 200">
-
-<circle cx="100" cy="90" r="60"
-class="draw-area"
-onclick="paint(this)" />
-
-<circle cx="100" cy="90" r="45"
-class="draw-area"
-onclick="paint(this)" />
-
-<rect x="80" y="135" width="15" height="40"
-class="draw-area"
-onclick="paint(this)" />
-
-<rect x="105" y="135" width="15" height="40"
-class="draw-area"
-onclick="paint(this)" />
-
-<path d="M120 150 Q180 130 170 180"
-class="draw-area"
-onclick="paint(this)" />
-
-</svg>
-
-</div>
+<button onclick="clearCard(this)">Clear</button>
 
 </div>
 
 <!-- ELEPHANT -->
 
-<div class="row">
-
-<div class="label" style="background:#dff4ff;border-color:#55bbff;">
-
-<img src="https://cdn-icons-png.flaticon.com/512/1998/1998610.png">
-
-<h2>ELEPHANT</h2>
-
-</div>
-
-<div class="step">
-<div class="step-number">1</div>
-
-<svg viewBox="0 0 200 200">
-
-<circle cx="100" cy="90" r="45"
-class="draw-area"
-onclick="paint(this)" />
-
-</svg>
-
-</div>
-
-<div class="step">
-<div class="step-number">2</div>
-
-<svg viewBox="0 0 200 200">
-
-<circle cx="100" cy="90" r="45"
-class="draw-area"
-onclick="paint(this)" />
-
-<circle cx="50" cy="90" r="25"
-class="draw-area"
-onclick="paint(this)" />
-
-<circle cx="150" cy="90" r="25"
-class="draw-area"
-onclick="paint(this)" />
-
-</svg>
-
-</div>
-
-<div class="step">
-<div class="step-number">3</div>
-
-<svg viewBox="0 0 200 200">
-
-<circle cx="100" cy="90" r="45"
-class="draw-area"
-onclick="paint(this)" />
-
-<circle cx="50" cy="90" r="25"
-class="draw-area"
-onclick="paint(this)" />
-
-<circle cx="150" cy="90" r="25"
-class="draw-area"
-onclick="paint(this)" />
-
-<rect x="90" y="90" width="20" height="60"
-class="draw-area"
-onclick="paint(this)" />
-
-</svg>
-
-</div>
-
-<div class="step">
-<div class="step-number">4</div>
-
-<svg viewBox="0 0 200 200">
-
-<circle cx="100" cy="90" r="45"
-class="draw-area"
-onclick="paint(this)" />
-
-<circle cx="50" cy="90" r="25"
-class="draw-area"
-onclick="paint(this)" />
-
-<circle cx="150" cy="90" r="25"
-class="draw-area"
-onclick="paint(this)" />
-
-<rect x="90" y="90" width="20" height="60"
-class="draw-area"
-onclick="paint(this)" />
-
-<rect x="60" y="145" width="20" height="35"
-class="draw-area"
-onclick="paint(this)" />
-
-<rect x="120" y="145" width="20" height="35"
-class="draw-area"
-onclick="paint(this)" />
-
-</svg>
-
-</div>
-
-<div class="step">
-<div class="step-number">5</div>
+<div class="card">
 
 <svg viewBox="0 0 200 200">
 
 <ellipse cx="100" cy="90" rx="55" ry="50"
-class="draw-area"
+class="shape"
 onclick="paint(this)" />
 
-<circle cx="50" cy="90" r="25"
-class="draw-area"
+<circle cx="55" cy="90" r="25"
+class="shape"
 onclick="paint(this)" />
 
-<circle cx="150" cy="90" r="25"
-class="draw-area"
-onclick="paint(this)" />
-
-<rect x="90" y="90" width="20" height="60"
-class="draw-area"
-onclick="paint(this)" />
-
-</svg>
-
-</div>
-
-<div class="step">
-<div class="step-number">6</div>
-
-<svg viewBox="0 0 200 200">
-
-<ellipse cx="100" cy="90" rx="55" ry="50"
-class="draw-area"
-onclick="paint(this)" />
-
-<circle cx="50" cy="90" r="25"
-class="draw-area"
-onclick="paint(this)" />
-
-<circle cx="150" cy="90" r="25"
-class="draw-area"
+<circle cx="145" cy="90" r="25"
+class="shape"
 onclick="paint(this)" />
 
 <rect x="90" y="90" width="20" height="60"
-class="draw-area"
+class="shape"
 onclick="paint(this)" />
 
 <rect x="60" y="145" width="20" height="35"
-class="draw-area"
+class="shape"
 onclick="paint(this)" />
 
 <rect x="120" y="145" width="20" height="35"
-class="draw-area"
+class="shape"
 onclick="paint(this)" />
 
 </svg>
 
-</div>
+<div class="name">Elephant</div>
+
+<button onclick="clearCard(this)">Clear</button>
 
 </div>
 
+<!-- PANDA -->
+
+<div class="card">
+
+<svg viewBox="0 0 200 200">
+
+<circle cx="100" cy="100" r="55"
+class="shape"
+onclick="paint(this)" />
+
+<circle cx="65" cy="65" r="18"
+class="shape"
+onclick="paint(this)" />
+
+<circle cx="135" cy="65" r="18"
+class="shape"
+onclick="paint(this)" />
+
+<circle cx="80" cy="95" r="10"
+class="shape"
+onclick="paint(this)" />
+
+<circle cx="120" cy="95" r="10"
+class="shape"
+onclick="paint(this)" />
+
+</svg>
+
+<div class="name">Panda</div>
+
+<button onclick="clearCard(this)">Clear</button>
+
 </div>
 
-<div class="footer">
-🎨 Tap Any Shape To Color
+<!-- RABBIT -->
+
+<div class="card">
+
+<svg viewBox="0 0 200 200">
+
+<circle cx="100" cy="110" r="50"
+class="shape"
+onclick="paint(this)" />
+
+<rect x="75" y="20" width="20" height="70"
+class="shape"
+onclick="paint(this)" />
+
+<rect x="105" y="20" width="20" height="70"
+class="shape"
+onclick="paint(this)" />
+
+</svg>
+
+<div class="name">Rabbit</div>
+
+<button onclick="clearCard(this)">Clear</button>
+
+</div>
+
+<!-- MONKEY -->
+
+<div class="card">
+
+<svg viewBox="0 0 200 200">
+
+<circle cx="100" cy="100" r="55"
+class="shape"
+onclick="paint(this)" />
+
+<circle cx="60" cy="70" r="18"
+class="shape"
+onclick="paint(this)" />
+
+<circle cx="140" cy="70" r="18"
+class="shape"
+onclick="paint(this)" />
+
+<ellipse cx="100" cy="110" rx="25" ry="20"
+class="shape"
+onclick="paint(this)" />
+
+</svg>
+
+<div class="name">Monkey</div>
+
+<button onclick="clearCard(this)">Clear</button>
+
+</div>
+
+<!-- GIRAFFE -->
+
+<div class="card">
+
+<svg viewBox="0 0 200 200">
+
+<circle cx="100" cy="55" r="30"
+class="shape"
+onclick="paint(this)" />
+
+<rect x="85" y="80" width="30" height="70"
+class="shape"
+onclick="paint(this)" />
+
+<rect x="70" y="150" width="15" height="35"
+class="shape"
+onclick="paint(this)" />
+
+<rect x="115" y="150" width="15" height="35"
+class="shape"
+onclick="paint(this)" />
+
+</svg>
+
+<div class="name">Giraffe</div>
+
+<button onclick="clearCard(this)">Clear</button>
+
+</div>
+
 </div>
 
 <script>
@@ -478,9 +311,23 @@ function setColor(color){
 
 }
 
-function paint(element){
+function paint(shape){
 
-    element.setAttribute("fill", selectedColor);
+    shape.style.fill = selectedColor;
+
+}
+
+function clearCard(button){
+
+    let card = button.parentElement;
+
+    let shapes = card.querySelectorAll('.shape');
+
+    shapes.forEach(shape=>{
+
+        shape.style.fill = "white";
+
+    });
 
 }
 
